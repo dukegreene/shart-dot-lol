@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sharten Your URL!</title>
+  <link href='https://fonts.googleapis.com/css?family=Averia+Libre:700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="outer-container">
+    <%= render "poomoji" %>
+    <%= yield %>
+  </div>
+</body>
+</html>

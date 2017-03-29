@@ -1,0 +1,6 @@
+<div id="shartener-form">
+  <%= form_for url, html: {class: "shartener"}, remote: true do |f| %>
+    <%= f.text_field :original_url, placeholder: "http://your.url.here" %>
+    <%= f.submit "Sharten it!", id: "shartener-button" %>
+  <% end %>
+</div>

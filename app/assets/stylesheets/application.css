@@ -1,0 +1,175 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@-webkit-keyframes stainbow {
+  0% {background-color: #987C66;}
+  20% {background-color: #61513D;}
+  40% {background-color: #A35438;}
+  60% {background-color: #493726;}
+  80% {background-color: #61544B;}
+  100% {background-color: #343112;}
+}
+
+body {
+  -webkit-animation-name: stainbow;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  color: #F5F0E9;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Averia Libre', cursive;
+  text-shadow: 5px 5px #362509;
+  position: relative;
+  top: -43px;
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+#outer-container {
+ /* border-width: 8px;
+  border-style: groove;
+  border-color: #755220;*/
+  border-radius: 6%;
+  width: 800px;
+  height: 600px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 8px 8px #362509;
+}
+
+#inner-container {
+  height: 60px;
+}
+
+#inner-footer {
+  position: absolute;
+  bottom: -10px;
+}
+
+#big-poomoji {
+  z-index: -1;
+  width: 181%;
+  height: 181%;
+  position: absolute;
+  top: -9999px;
+  bottom: -9699px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+}
+
+#shartener-form {
+  margin: 0 auto;
+  width: 550px;
+  position: relative;
+  top: 250px;
+}
+
+.rotated {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+input::-webkit-input-placeholder {
+  color: #F5F0E9 !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+  color: #F5F0E9 !important;  
+}
+ 
+input::-moz-placeholder { /* Firefox 19+ */
+  color: #F5F0E9 !important;  
+}
+ 
+input:-ms-input-placeholder { /* IE 10+ */
+  color: #F5F0E9 !important;  
+}
+
+input:focus::-webkit-input-placeholder { 
+  opacity: 0; 
+}
+input:focus:-moz-placeholder { /* Firefox 18- */
+  opacity: 0; 
+  } 
+
+input:focus::-moz-placeholder { /* Firefox 19+ */
+  opacity: 0; 
+  }
+input:focus:-ms-input-placeholder { /* IE 10+ */
+  opacity: 0; 
+  }
+
+#shartener-form input[type=text] {
+  height: 140px;
+  border:none;
+  width: 550px;
+  -webkit-animation-name: stainbow;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  border-radius: 12% 12% 50% 50%;
+  font-family: 'Finger Paint', cursive;
+  font-size: 24px;
+  color: #F5F0E9;
+  text-align: center;
+  box-shadow: inset 8px 8px #362509
+}
+
+#shartener-button {
+  height: 50px;
+  width: 200px;
+  border-radius: 50%;
+  -webkit-animation-name: stainbow;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  font-family: 'Averia Libre', cursive;
+  font-size: 30px;
+  color: #F5F0E9;
+  border: none;
+  box-shadow: 4px 4px #362509;
+  position: relative;
+  top: -60px;
+  left: 290px;
+  cursor: url(poo-cursor.png), auto;
+}
+
+#shartened-url:link {
+  color: #fff;
+}
+
+#shartened-url:hover {
+  color: #000;
+}
+

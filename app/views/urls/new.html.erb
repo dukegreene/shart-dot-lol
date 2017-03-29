@@ -1,0 +1,17 @@
+<div id="inner-container">
+
+  <h1>THE URL SHARTENER!</h1>
+
+  <%= render "form", url: @url %>
+  
+  <% if @errors %>
+    <div id="errors">
+      <ul>
+        <% @errors.each do |error| %>
+          <li><%= error %>. Furthermore, </li>
+        <% end %>
+        <li>...wait, nope that's it.</li>
+      </ul>
+    </div>
+  <% end %>
+</div>
