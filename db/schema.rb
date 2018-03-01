@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(version: 20160305042158) do
   enable_extension "plpgsql"
 
   create_table "urls", force: :cascade do |t|
-    t.string   "original_url",             null: false
-    t.string   "strink",                   null: false
+    t.string   "original_url",              null: false
+    t.string   "strink",       default: "", null: false
     t.integer  "visits",       default: 0
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
 end
