@@ -21,7 +21,7 @@ class Url < ActiveRecord::Base
   end
 
   def shartened_url
-    "http://shart.lol/#{strink}rRT"
+    "http://shart.lol/#{strink}"
   end
   
   def elaborate_original_url

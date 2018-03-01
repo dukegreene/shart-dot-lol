@@ -43,8 +43,58 @@ h1 {
   font-size: 3.5em;
 }
 
+.shartened-header {
+  background-color: rgba(54, 37, 9, 0.55);
+}
+
 h2 {
   font-size: 1.2em;
+}
+
+.link:link {
+  color: #fff;
+  cursor: url(<%= image_path "/assets/images/poo-cursor.png" %>), auto;
+}
+
+.link:hover {
+  color: #000;
+  cursor: url(<%= image_path "/assets/images/poo-cursor.png" %>), auto;
+}
+
+.link:visited {
+  color: #fff;
+  cursor: url(<%= image_path "/assets/images/poo-cursor.png" %>), auto;
+}
+
+#url-info {
+  position: relative;
+  margin: 0 auto;
+  top: 280px;
+  width: 400px;
+  border-radius: 12% 12% 50% 50%;
+  background-color: rgba(54, 37, 9, 0.55);
+}
+
+.home-link {
+  height: 50px;
+  width: 200px;
+  border-radius: 50%;
+  -webkit-animation-name: stainbow;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  font-family: 'Averia Libre', cursive;
+  font-size: 30px;
+  color: #F5F0E9;
+  border: none;
+  box-shadow: 4px 4px #362509;
+  position: relative;
+  top: 235px;
+  left: 290px;
+  cursor: url(<%= image_path "/assets/images/poo-cursor.png" %>), auto;
 }
 
 #outer-container {
@@ -191,11 +241,4 @@ input:focus:-ms-input-placeholder { /* IE 10+ */
   cursor: url(<%= image_path "/assets/images/poo-cursor.png" %>), auto;
 }
 
-#shartened-url:link {
-  color: #fff;
-}
-
-#shartened-url:hover {
-  color: #000;
-}
 

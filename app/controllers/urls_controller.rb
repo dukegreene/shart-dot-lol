@@ -10,7 +10,7 @@ class UrlsController < ApplicationController
       if request.xhr?
         render partial: "url", locals: {url: @url}
       else
-        redirect_to @url, notice: "#{@url.strink}rRT!!! You've totally shartened it!"
+        redirect_to @url, notice: "#{@url.strink}!!! You've totally shartened it!"
       end
     else
       @errors = @url.errors.full_messages
@@ -23,7 +23,19 @@ class UrlsController < ApplicationController
   end
 
   def show
-    @Url = Url.find(params[:id])
+    @url = Url.find(params[:id])
+  end
+
+  def redirect
+    p "&" * 80
+    strink = params[:strink]
+    url = Url.find_by(strink: strink)
+    if url.nil?
+      render "NOOOOOOOOOOOOOO"
+    end
+    url.visits += 1
+    url.save
+    redirect_to url.original_url
   end
 
   private

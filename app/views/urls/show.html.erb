@@ -1,1 +1,13 @@
-<h1>At the Show Route</h1>
+<div id="inner-container">
+
+  <h1><%= @url.strink %>!!!</h1>
+
+  <div id="url-info">
+    <h2>Link to save for later: <%= link_to(@url.shartened_url, @url.shartened_url, class: "link") %>
+    </h2>
+    <h2>Visit count: <%= @url.visits %></h2>
+  </div>
+
+  <%= button_to("Home", root_path, method: "get", class: "home-link") %>
+
+</div>
