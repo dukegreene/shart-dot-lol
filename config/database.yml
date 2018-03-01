@@ -23,13 +23,13 @@ default: &default
 
 development:
   <<: *default
-  database: url-shartener-2016_development
+  database: shart-dot-lol_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: url-shartener-2016
+  #username: shart-dot-lol
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: url-shartener-2016_test
+  database: shart-dot-lol_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -75,11 +75,6 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
 production:
-  <<: *default
-  database: url-shartener-2016_production
-  username: url-shartener-2016
-  password: <%= ENV['URL-SHARTENER-2016_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+
