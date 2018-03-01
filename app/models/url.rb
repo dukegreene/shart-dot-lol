@@ -2,7 +2,7 @@ class Url < ActiveRecord::Base
   validates_presence_of :original_url, :strink, :visits
   validates_uniqueness_of :original_url, :strink
   validate :strink_has_chars
-  validates_format_of :original_url, with: /\Ahttps?:\/\/\w+\.\w{2,}/, message: "must begin with 'http://' or 'https://', or at least end with '.so/.me/.thi/.ng/.li/.ke/.th/.is'"
+  validates_format_of :original_url, with: /\Ahttps?:\/\/\w+\.\w{2,}/, message: "must begin with 'http://' or 'https://', or end with '.so/.me/.thi/.ng/.li/.ke/.th/.is'"
   validates_format_of :strink, with: /[BFPRV]{8}/i, message: "must contain some combination of 8 of these characters: B F P R V (case-insensitive)"
   after_initialize :set_defaults
 
