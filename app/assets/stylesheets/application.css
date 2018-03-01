@@ -31,12 +31,12 @@ body {
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-fill-mode: both;
   -webkit-animation-delay: 0s;
+  font-family: 'Averia Libre', cursive;
   color: #F5F0E9;
   text-align: center;
 }
 
 h1 {
-  font-family: 'Averia Libre', cursive;
   text-shadow: 5px 5px #362509;
   position: relative;
   top: -43px;
@@ -86,6 +86,32 @@ h2 {
   width: 550px;
   position: relative;
   top: 250px;
+}
+
+#error-catcher {
+  margin: 0 auto;
+  height: 80px;
+  width: 700px;
+  position: relative;
+  top: -30px;
+  text-shadow: 5px 5px #362509;
+}
+
+#errors {
+  width: 100%;
+  height: 100%;
+  /*background-color: #362509;*/
+  border-radius: 4%;
+  background-color: rgba(54, 37, 9, 0.55);
+  background-image: url(teardrop.png);
+  background-repeat: no-repeat;
+  background-position: -2% -0%;
+}
+
+#errors ul {
+  list-style: none;
+  position: relative;
+  top: 5px;
 }
 
 .rotated {

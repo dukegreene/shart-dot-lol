@@ -9,5 +9,5 @@ $(document).ready ->
     $("#inner-container").append xhr.responseText
   ).on("ajax:error", (e, xhr, status, error) ->
     console.log(xhr.responseText)
-    # $("#outer-container").append(xhr.responseText)
+    $("#error-catcher").append(xhr.responseText)
   )
