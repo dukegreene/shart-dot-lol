@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe Url do
-  let(:url){Url.new(original_url: "http://example.com", strink: "fFpvbrRR", visits: 4)}
+  let(:url){Url.new(original_url: "http://example.com", shartened: "fFpvbrRR", visits: 4)}
   let(:default_url){Url.new}
 
   it "has an original url" do
