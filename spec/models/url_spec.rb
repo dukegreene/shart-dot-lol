@@ -13,7 +13,7 @@ describe Url do
   end
 
   it "has a shartened url" do
-    expect(url.shartened_url).to eq("http://urlshartener.com/fFpvbrRRrRT")
+    expect(url.shartened_url).to eq("http://urlshartener.com/fFpvbrRR")
   end
 
   it "has a count of visits" do
