@@ -5,6 +5,10 @@ class UrlsController < ApplicationController
   end
 
   def create
+    if existing_url = Url.existing_url_for(url_params[:original_url])
+      return render partial: "url", locals: {url: existing_url}
+    end
+
     @url = Url.new(url_params).prepare!
     if @url.save
       if request.xhr?
@@ -31,15 +35,18 @@ class UrlsController < ApplicationController
     strink = params[:strink]
     url = Url.find_by(strink: strink)
     if url.nil?
-      render "NOOOOOOOOOOOOOO"
+      redirect_to root_path
+    else
+      url.visits += 1
+      url.save
+      redirect_to url.original_url
     end
-    url.visits += 1
-    url.save
-    redirect_to url.original_url
   end
 
   private
+  
   def url_params
     params.require(:url).permit(:original_url)
   end
+
 end

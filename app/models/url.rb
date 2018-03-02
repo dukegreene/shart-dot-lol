@@ -31,6 +31,13 @@ class Url < ActiveRecord::Base
     return self.original_url
   end
 
+  def self.existing_url_for(url_try)
+    unless /https?:\/\/\w+\.\w{2,}/ =~ url_try
+      url_try = "http://#{url_try}"
+    end
+    return Url.find_by(original_url: url_try)
+  end
+
   private
   def set_defaults
     self.visits = 0 if self.visits.nil?
