@@ -30,7 +30,7 @@ class UrlsController < ApplicationController
     @url = Url.find(params[:id])
   end
 
-  def redirect
+  def redirect_out
     p "&" * 80
     strink = params[:strink]
     url = Url.find_by(strink: strink)
@@ -40,6 +40,17 @@ class UrlsController < ApplicationController
       url.visits += 1
       url.save
       redirect_to url.original_url
+    end
+  end
+
+  def lookup
+    strink = params[:strink]
+    p strink
+    url = Url.find_by(strink: strink)
+    if url.nil?
+      redirect_to root_path
+    else
+      redirect_to url_path(url.id)
     end
   end
 
